@@ -1,0 +1,12 @@
+body{
+    // background-color: rgb(245, 188, 188);
+    // color: rgb(231, 22, 231);
+}
+@import './base/settings';
+@import './base/base';
+@import './components/home';
+@import './components/Quizinstructions';
+@import './components/Play';
+@import './components/Analysis';
+@import './components/Login';
+@import './components/Navbar';
