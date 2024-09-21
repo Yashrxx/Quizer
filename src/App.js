@@ -18,7 +18,7 @@ function App() {
     <Navbar title="Quizer" aboutText="About Us"/>
     <Routes>
      {/* <Alert/> */}
-     <Route path="/" exact element={<Home/>}/>
+     <Route path="/quizer" exact element={<Home/>}/>
      <Route path="/play/instructions" exact element={<Quizinstructions/>}/>
      <Route path="/play/quiz" alert={alert} exact element={<Play/>}/>
      <Route path="/play/quiz/analysis" exact element={<Analysis/>}/>
