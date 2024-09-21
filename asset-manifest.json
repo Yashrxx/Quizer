@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Quizer/static/css/main.6caf02ab.css",
-    "main.js": "/Quizer/static/js/main.6f4b5c6e.js",
+    "main.js": "/Quizer/static/js/main.e76703c3.js",
     "static/media/materialdesignicons-webfont.eot": "/Quizer/static/media/materialdesignicons-webfont.2146c3c82b553977abc7.eot",
     "static/media/materialdesignicons-webfont.ttf?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.1fcc36272ea3e53d0031.ttf",
     "static/media/materialdesignicons-webfont.woff?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.e55a20c80650829ec5fd.woff",
@@ -14,10 +14,10 @@
     "static/media/554055__gronkjaer__rightanswer.mp3": "/Quizer/static/media/554055__gronkjaer__rightanswer.d6583a335e0796193a70.mp3",
     "index.html": "/Quizer/index.html",
     "main.6caf02ab.css.map": "/Quizer/static/css/main.6caf02ab.css.map",
-    "main.6f4b5c6e.js.map": "/Quizer/static/js/main.6f4b5c6e.js.map"
+    "main.e76703c3.js.map": "/Quizer/static/js/main.e76703c3.js.map"
   },
   "entrypoints": [
     "static/css/main.6caf02ab.css",
-    "static/js/main.6f4b5c6e.js"
+    "static/js/main.e76703c3.js"
   ]
 }
