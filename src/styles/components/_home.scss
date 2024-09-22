@@ -35,6 +35,7 @@ body{
         filter: blur(4px);
     }
     section{
+        border: 1px solid black;
         position: absolute;
         background: inherit;
         overflow: hidden;
@@ -191,14 +192,14 @@ body{
             position: absolute;
             transform: translate(-10%,-10%);
             z-index: -1;
-            height: 50%;
-            width: 110%;
             border-radius: 25px;
             margin-top: 10px;
             filter: blur(0);
         }
     }
     #home section{
+        height: 60%;
+        background-color: violet;
         margin-top: 125px;
         h1{
             font-size: 2rem;

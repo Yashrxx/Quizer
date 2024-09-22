@@ -76,7 +76,7 @@ class Analysis extends Component {
                                     <span className='rightx'>{this.state.numberofQuestion}</span>
                                 </div>
                                 <div className="answeredquestion">
-                                    <span className='statleft'>Total Number of AnsweredQuestions : </span>
+                                    <span className='statleft'>Total no of AnsweredQuestions : </span>
                                     <span className='rightx'>{this.state.numberofAnsweredQuestion}</span>
                                 </div>
                                 <div className="correctanswers">

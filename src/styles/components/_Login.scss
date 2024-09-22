@@ -31,6 +31,8 @@
         filter: blur(4px);
     }
     section{
+        border: 2px solid white;
+        background-image: conic-gradient();
         position: absolute;
         background: inherit;
         overflow: hidden;
