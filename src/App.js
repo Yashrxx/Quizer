@@ -1,5 +1,5 @@
 import React from "react";
-import { useState} from 'react';
+// import { useState} from 'react';
 import Home from './components/home.js';
 import Quizinstructions from "./components/quiz/Quizinstructions.js";
 import Play from "./components/quiz/Play.js";
@@ -15,7 +15,7 @@ import {
 function App() {
   return (
     <Router>
-    <Navbar title="Quizer" aboutText="About Us"/>
+    <Navbar title="Quizer" aboutText="About Us" mode="black"/>
     <Routes>
      {/* <Alert/> */}
      <Route path="/quizer" exact element={<Home/>}/>
