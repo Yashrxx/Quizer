@@ -4,7 +4,7 @@
 //     // background-color: white;
 // }
 #wallpaper {
-    // background-image: url('../../assets/img/wallx.jpg');
+    background-image: url('../../assets/img/bg-blk-text-1.png');
     // background-size: cover;
     // background-position: center;
     // background-color: rgb(184, 252, 252);
@@ -13,7 +13,6 @@
 
     // background-color: white;
     .container {
-
         // height: 1600px;
         // background-color: black;
         .heading {
@@ -45,8 +44,8 @@
             // border: 5px solid black;
             height: 350px;
             border-radius: 13px;
-            background-color: rgba(255, 255, 255, 0.2);
-            // background-color: rgba(0,0,0,0.2);
+            // background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0,0,0,0.5);
             // background-color: rgba(210, 42, 30,0.8);
             padding: 20px;
             display: flex;
@@ -61,7 +60,7 @@
 
             h1 {
                 font-size: 1.2rem;
-                color: black;
+                color: rgb(37, 150, 150);
             }
 
             .package-1 {

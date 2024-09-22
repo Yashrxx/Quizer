@@ -35,7 +35,7 @@ export default function Quizinstructions() {
               </div>
             </div>
           </div>
-          <div className="Modalquestion">
+          {/* <div className="Modalquestion">
             <h1>Modal Question</h1>
             <div className="package-2">
               <div className="framework-1">
@@ -47,8 +47,8 @@ export default function Quizinstructions() {
                 <li>Response gets submited automatically after timer ends</li>
               </div>
             </div>
-          </div>
-          <div className="marker">
+          </div> */}
+          {/* <div className="marker">
             <div className="internal-mrk">
               <div className="framework-2">
                 <img className='marker-1' src={Marker} alt="Error 404" /></div>
@@ -64,7 +64,7 @@ export default function Quizinstructions() {
               </div>
             </div>
             <li>select the option which best answers the question by clicking (or selecting) it</li>
-          </div>
+          </div> */}
           <div className='options'>
             <div className='left'><Link className="Back" to="/quizer"><div className="leave">No,take me back</div></Link></div>
             <div className='right'><Link className="Forward" to="/play/quiz"><div className="continue">Okay, let's do this</div></Link></div>
