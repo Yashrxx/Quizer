@@ -13,19 +13,18 @@ function Login() {
     console.log('Login attempted with:', { email, password });
     // Here you would typically send a request to your server
   };
-
   return (
     <Fragment>
       <Helmet><title>Quiz App</title></Helmet>
       <div id="login" >
         <section >
           <Container>
-            <Row className="justify-content-md-center">
+            <Row style={{justifyContent:"space-evenly",alignItems:"center",alignContent:"center"}}>
               <Col xs={12} md={6}>
                 <h2 className="text-center mb-4">Login</h2>
-                <Form onSubmit={handleSubmit}>
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                <Row  onSubmit={handleSubmit}>
+                  <Form.Group style={{width:"200%"}} className="justify-content-md-center  mb-3" controlId="formBasicEmail">
+                    <Form.Label >Email address</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="Enter email"
@@ -34,7 +33,7 @@ function Login() {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className=" mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                       type="password"
@@ -44,16 +43,15 @@ function Login() {
                     />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" className="w-100">
+                  <Button className="logx mb-3 w-100" variant="primary" type="submit" >
                     Login
                   </Button>
-                </Form>
+                </Row>
               </Col>
             </Row>
           </Container>
         </section>
       </div>
-      <footer className='foot'>Copyright @Quiz-app |All rights Reserved 16-09-24</footer>
     </Fragment>
   );
 }
