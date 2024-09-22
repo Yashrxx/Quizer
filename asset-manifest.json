@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/Quizer/static/css/main.fbd49aaf.css",
-    "main.js": "/Quizer/static/js/main.d56b9fc1.js",
+    "main.css": "/Quizer/static/css/main.e0e4f052.css",
+    "main.js": "/Quizer/static/js/main.7e051054.js",
     "static/media/materialdesignicons-webfont.eot": "/Quizer/static/media/materialdesignicons-webfont.2146c3c82b553977abc7.eot",
     "static/media/materialdesignicons-webfont.ttf?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.1fcc36272ea3e53d0031.ttf",
+    "static/media/blk-bg.png": "/Quizer/static/media/blk-bg.3f790e6a57f2f45a3618.png",
     "static/media/materialdesignicons-webfont.woff?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.e55a20c80650829ec5fd.woff",
     "static/media/materialdesignicons-webfont.woff2?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.ec024da790d2972da002.woff2",
+    "static/media/wood-blk-bg.jpg": "/Quizer/static/media/wood-blk-bg.e8f4105d09e40f73dd1d.jpg",
+    "static/media/bg-blk-text-1.png": "/Quizer/static/media/bg-blk-text-1.6dbbb561e12e02609505.png",
     "static/media/dance.jpg": "/Quizer/static/media/dance.9fb6ae7b653d4b13c566.jpg",
     "static/media/188388__wubitog__mid-high-tone-button-click.wav": "/Quizer/static/media/188388__wubitog__mid-high-tone-button-click.19c6ea308ca59124ea94.wav",
     "static/media/nta-mob-2.png": "/Quizer/static/media/nta-mob-2.6eb6df9364e318dd5869.png",
     "static/media/nta-mob-1.png": "/Quizer/static/media/nta-mob-1.24799608957f509790f7.png",
     "static/media/4 marker.jpg": "/Quizer/static/media/4 marker.6428f76b717c587be481.jpg",
-    "static/media/test-bg.avif": "/Quizer/static/media/test-bg.461a98b7fd5ea306cef8.avif",
     "static/media/554053__gronkjaer__wronganswer.mp3": "/Quizer/static/media/554053__gronkjaer__wronganswer.0afb49d72dd875cdbc72.mp3",
     "static/media/554055__gronkjaer__rightanswer.mp3": "/Quizer/static/media/554055__gronkjaer__rightanswer.d6583a335e0796193a70.mp3",
     "index.html": "/Quizer/index.html",
-    "main.fbd49aaf.css.map": "/Quizer/static/css/main.fbd49aaf.css.map",
-    "main.d56b9fc1.js.map": "/Quizer/static/js/main.d56b9fc1.js.map"
+    "main.e0e4f052.css.map": "/Quizer/static/css/main.e0e4f052.css.map",
+    "main.7e051054.js.map": "/Quizer/static/js/main.7e051054.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbd49aaf.css",
-    "static/js/main.d56b9fc1.js"
+    "static/css/main.e0e4f052.css",
+    "static/js/main.7e051054.js"
   ]
 }
