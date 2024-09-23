@@ -186,7 +186,7 @@ body{
 @media (max-width:328px) {
     #home{
         section::before{
-            // height: 100%;
+            height: 100%;
             background: inherit;
             box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
             content: "";
@@ -224,5 +224,58 @@ body{
             transform: translateX(-2%);
     }
 }
+    }
+}
+@media (max-width:336px) {
+    #home{
+        margin-bottom: 0px;
+        height: 100vh;
+        section::before{
+            height: 100%;
+            background: inherit;
+            box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
+            content: "";
+            position: absolute;
+            transform: translate(-10%,-10%);
+            z-index: -1;
+            border-radius: 25px;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            filter: blur(0px);
+        }
+    }
+    #home section{
+        // background-image: url(../../assets/img/dance.jpg);
+        height: 80%;
+        background-color: violet;
+        margin-top: 100px;
+        margin-bottom: 0px;
+        h1{
+            font-size: 2rem;
+        }
+        .play-button-container{
+            height: 45px;
+            width: 96%;
+            transform: translateX(-1.5%);
+        }
+        .auth-container-2{
+            a.auth-button{
+                background-color: white;
+                color: red;
+                transform: translateX(-10%);
+        }
+    }
+    .auth-container-1{
+        a.auth-button{
+            background-color: white;
+            color: red;
+            transform: translateX(-2%);
+    }
+}
+    }
+    .foot{
+        // background-color: pink;
+        margin-top: -70px;
+        height: 75px;
     }
 }
