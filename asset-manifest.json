@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Quizer/static/css/main.284c0e2c.css",
+    "main.css": "/Quizer/static/css/main.623a534d.css",
     "main.js": "/Quizer/static/js/main.ad1e016c.js",
     "static/media/materialdesignicons-webfont.eot": "/Quizer/static/media/materialdesignicons-webfont.2146c3c82b553977abc7.eot",
     "static/media/materialdesignicons-webfont.ttf?v=7.4.47": "/Quizer/static/media/materialdesignicons-webfont.1fcc36272ea3e53d0031.ttf",
@@ -10,17 +10,18 @@
     "static/media/wood-blk-bg.jpg": "/Quizer/static/media/wood-blk-bg.e8f4105d09e40f73dd1d.jpg",
     "static/media/bg-blk-text-1.png": "/Quizer/static/media/bg-blk-text-1.6dbbb561e12e02609505.png",
     "static/media/188388__wubitog__mid-high-tone-button-click.wav": "/Quizer/static/media/188388__wubitog__mid-high-tone-button-click.19c6ea308ca59124ea94.wav",
+    "static/media/inst-wallpaper.jpg": "/Quizer/static/media/inst-wallpaper.edafb0910670db0765f4.jpg",
     "static/media/nta-mob-2.png": "/Quizer/static/media/nta-mob-2.6eb6df9364e318dd5869.png",
     "static/media/nta-mob-1.png": "/Quizer/static/media/nta-mob-1.24799608957f509790f7.png",
     "static/media/4 marker.jpg": "/Quizer/static/media/4 marker.6428f76b717c587be481.jpg",
     "static/media/554053__gronkjaer__wronganswer.mp3": "/Quizer/static/media/554053__gronkjaer__wronganswer.0afb49d72dd875cdbc72.mp3",
     "static/media/554055__gronkjaer__rightanswer.mp3": "/Quizer/static/media/554055__gronkjaer__rightanswer.d6583a335e0796193a70.mp3",
     "index.html": "/Quizer/index.html",
-    "main.284c0e2c.css.map": "/Quizer/static/css/main.284c0e2c.css.map",
+    "main.623a534d.css.map": "/Quizer/static/css/main.623a534d.css.map",
     "main.ad1e016c.js.map": "/Quizer/static/js/main.ad1e016c.js.map"
   },
   "entrypoints": [
-    "static/css/main.284c0e2c.css",
+    "static/css/main.623a534d.css",
     "static/js/main.ad1e016c.js"
   ]
 }
