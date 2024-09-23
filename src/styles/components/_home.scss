@@ -104,7 +104,7 @@ body{
             width: 90%;
             background-color: rgb(255, 10, 10);
             border-radius: 13px;
-            margin:auto;
+            // margin:auto;
             color:black;
             list-style: none;
             text-decoration: none;
@@ -219,6 +219,10 @@ body{
         filter: blur(0px);
     }
     section{
+        .cube{
+            font-size: 5rem;
+            color:$orange;
+        }
         border: 3px solid black;
         position: absolute;
         background: inherit;
@@ -230,6 +234,9 @@ body{
         height: 30%;
         width: 80%;
         border-radius: 25px;
+    }
+    .play-button-container{
+        margin-top: -20px;
     }
 
     }
