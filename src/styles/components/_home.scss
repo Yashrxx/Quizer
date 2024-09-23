@@ -324,7 +324,7 @@ body{
         section{
             position: relative;
             transform: translateX(0%);
-            height: 70%;
+            height: 90%;
             width: 80%;
             border-radius: 25px;
             margin-top: 30px;
@@ -348,6 +348,10 @@ body{
                 margin-top: 20px;
                 }   
             }
+        }
+        .foot{
+            margin-top: 0px;
+            height: 45px;
         }
 }
 
