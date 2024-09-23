@@ -161,8 +161,11 @@ body{
     #home section{
         transform: translateX(10%);
         width:80%;
-        height:100%;
-        padding:0 10px;
+        height:60%;
+        // padding:0 10px;
+        h1{
+            font-size: 1.8rem;
+        }
         .play-button-container{
             height: 45px;
             width: 96%;
@@ -190,12 +193,12 @@ body{
         margin-top: -10px;
     }
     h1{
-        margin-top: -5px;
-        font-size: 3rem;
-        color:black;
+        margin-top: -15px;
+        // font-size: 3rem;
+        color:white;
         font-weight:bolder;
     }
-    background-image: url('../../assets/img/inst-wallpaper.jpg');
+    background-image: url('../../assets/img/blk-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -223,7 +226,8 @@ body{
         transform: translateX(10%);
         padding-left: 2rem;
         padding-right: 2rem;
-        height: 100%;
+        border: 3px solid greenyellow;
+        height: 30%;
         width: 80%;
         border-radius: 25px;
     }
