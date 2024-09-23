@@ -54,15 +54,13 @@
         // background-color: rgb(182, 47, 254);
     }
     #login{
-        background-image: url(../../assets/img/dance.jpg);
+        // background-image: url(../../assets/img/dance.jpg);
         background-size: cover;
         background-position: center;
         display: flex;
         justify-content: space-around;
         height:100vh;
         width: 100vw;
-        // background-image: conic-gradient(red,blue,green,yellow,orange,pink,white,cyan,maroon,violet);
-        // background-color: cyan;
         section::before{
             background: inherit;
             box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
@@ -80,7 +78,7 @@
             position: absolute;
             background: inherit;
             overflow: hidden;
-            // transform: translateX(550px);
+            border: 2px solid greenyellow;
             transform: translateX(5%);
             padding-left: 2rem;
             padding-right: 2rem;
