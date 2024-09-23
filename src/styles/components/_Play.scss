@@ -521,16 +521,17 @@
     }
 
     .Question {
-        // background-color: orange;
-
+        .options{
+            .col-1{
+                margin-bottom: 20px;
+            }
+        }
         .options {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
-            // background-color: white;
-
             .col-1 {
                 width: 100%;
 
@@ -557,6 +558,53 @@
             }
         }
     }
+    footer {
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .x{
+            margin-left: 0px;
+            margin-bottom: 10px;
+        }
+        .y{
+            margin-right: 0px;
+        }
+        // background-color: rgb(251, 82, 82);
+        button {
+            height: 30px;
+            background-color: greenyellow;
+            border-radius: 13px;
+        }
+        #submit-button {
+            width: 80%;
+            list-style: none;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+    }
+        .back {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: orange;
+            margin-left: 10px;
+        }
+
+        .next {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            color: orange;
+            align-items: center;
+            margin-right: 10px;
+        }
 }
 
 @media (max-width:380px) {
@@ -573,7 +621,6 @@
             .lifeline-icon:hover {
                 transform: scale(0.9);
             }
-
             .hints {
                 display: flex;
                 flex-direction: column;
@@ -652,52 +699,34 @@
         .x{
             margin-left: 0px;
             margin-bottom: 10px;
+            width: 100px;
         }
         .y{
             margin-right: 0px;
+            width: 100px;
         }
-        // background-color: rgb(251, 82, 82);
         button {
             height: 30px;
             background-color: greenyellow;
             border-radius: 13px;
         }
-        #submit-button {
-            width: 80%;
-            list-style: none;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-        }
-
-        .submit {
-            list-style: none;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
         .back {
             height: 100%;
-            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: orange;
+            margin-left: 0px;
         }
 
         .next {
             height: 100%;
-            width: 100%;
             display: flex;
             justify-content: center;
             color: orange;
             align-items: center;
+            margin-right: 10px;
         }
     }
 }
