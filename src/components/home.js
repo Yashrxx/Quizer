@@ -8,6 +8,7 @@ export default function Home() {
         <Helmet><title>Quiz App</title></Helmet>
     <div id="home" >
         <section >
+            <div className="flexer">
             <div className='rubics' style={{textAlign:'center'}}>
                 <span className="mdi mdi-cube-outline cube"></span>
                 <h1>QUIZ APP</h1>
@@ -23,6 +24,7 @@ export default function Home() {
             <div className="auth-container-2">
             <Link className='auth-button' to="/register">
             <div className="sign">Sign up</div></Link>
+            </div>
             </div>
             </div>
         </section>

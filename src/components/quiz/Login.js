@@ -17,6 +17,7 @@ function Login() {
     <Fragment>
       <Helmet><title>Quiz App</title></Helmet>
       <div id="login" >
+        <div className="container-x">
         <section >
           <Container>
             <Row style={{justifyContent:"space-evenly",alignItems:"center",alignContent:"center"}}>
@@ -51,6 +52,7 @@ function Login() {
             </Row>
           </Container>
         </section>
+      </div>
       </div>
     </Fragment>
   );

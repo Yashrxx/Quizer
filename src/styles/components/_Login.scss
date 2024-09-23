@@ -1,25 +1,25 @@
 // .container{
 //     background-color: black;
 // }
-.container{
-    height: 100%;
-    width: 100%;
-    // background-color: rgb(182, 47, 254);
+.container-x{
+
 }
 #login{
     background-image: url(../../assets/img/blk-bg.png);
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height:100vh;
     width: 100vw;
     // background-image: conic-gradient(red,blue,green,yellow,orange,pink,white,cyan,maroon,violet);
     // background-color: cyan;
-    section::before{
+    .container-x::before{
         background: inherit;
         // box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
-        // box-shadow: inset 0 0 0 500px rgba(50, 43, 43, 0.5);
+        box-shadow: inset 0 0 0 500px rgba(50, 43, 43, 0.5);
         content: "";
         position: absolute;
         transform: translate(-10%,-10%);
@@ -28,42 +28,48 @@
         width: 110%;
         border-radius: 25px;
         margin-top: 10px;
-        filter: blur(4px);
+        filter: blur(5px);
     }
-    section{
+    .container-x{
         border: 2px solid white;
-        background-image: conic-gradient();
-        position: absolute;
+        position: relative;
         background: inherit;
         overflow: hidden;
         // transform: translateX(550px);
-        transform: translateX(90%);
+        // transform: translateX(10%);
         padding-left: 2rem;
         padding-right: 2rem;
-        height: 80%;
+        height: 50%;
         width: 35%;
         // margin-right: 200px;
         border-radius: 25px;
         margin-top: 75px;
+        height: 70%;
+        width: 40%;
+        // background-color: rgb(182, 47, 254);
+        border: 2px solid white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
-@media (max-width:872px) {
-    .container{
-        height: 100%;
-        width: 100%;
-        // background-color: rgb(182, 47, 254);
-    }
+@media (max-width:990px) {
     #login{
-        // background-image: url(../../assets/img/dance.jpg);
+        background-image: url(../../assets/img/blk-bg.png);
         background-size: cover;
         background-position: center;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         height:100vh;
         width: 100vw;
-        section::before{
+        // background-image: conic-gradient(red,blue,green,yellow,orange,pink,white,cyan,maroon,violet);
+        // background-color: cyan;
+        .container-x::before{
             background: inherit;
-            box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
+            // box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
+            box-shadow: inset 0 0 0 500px rgba(50, 43, 43, 0.5);
             content: "";
             position: absolute;
             transform: translate(-10%,-10%);
@@ -72,21 +78,75 @@
             width: 110%;
             border-radius: 25px;
             margin-top: 10px;
-            filter: blur(4px);
+            filter: blur(5px);
         }
-        section{
-            position: absolute;
+        .container-x{
+            border: 2px solid white;
+            position: relative;
             background: inherit;
             overflow: hidden;
-            border: 2px solid greenyellow;
-            transform: translateX(5%);
+            // transform: translateX(550px);
+            // transform: translateX(10%);
             padding-left: 2rem;
             padding-right: 2rem;
-            height: 40%;
-            width: 90%;
+            height: 50%;
+            width: 35%;
             // margin-right: 200px;
             border-radius: 25px;
             margin-top: 75px;
+            height: 70%;
+            width: 50%;
+            // background-color: rgb(182, 47, 254);
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media (max-width:872px) {
+    #login{
+        background-image: url(../../assets/img/blk-bg.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height:100vh;
+        width: 100vw;
+        // background-image: conic-gradient(red,blue,green,yellow,orange,pink,white,cyan,maroon,violet);
+        // background-color: cyan;
+        .container-x::before{
+            background: inherit;
+            // box-shadow: inset 0 0 0 500px rgba(255,255,255,0.01);
+            box-shadow: inset 0 0 0 500px rgba(50, 43, 43, 0.5);
+            content: "";
+            position: absolute;
+            transform: translate(-10%,-10%);
+            z-index: -1;
+            height: 110%;
+            width: 110%;
+            border-radius: 25px;
+            margin-top: 10px;
+            filter: blur(5px);
+        }
+        .container-x{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border: 2px solid white;
+            position: relative;
+            background: inherit;
+            overflow: hidden;
+            background-color: violet;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-radius: 25px;
+            // margin-top: 75px;
+            height: 40%;
+            width: 70%;
+            border: 2px solid white;
         }
     }
 }
