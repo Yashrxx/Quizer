@@ -7,7 +7,7 @@ import questions from '../../questions.json';
 import M from 'materialize-css';
 import correctSound from '../../assets/img/554055__gronkjaer__rightanswer.mp3';
 import wrongSound from '../../assets/img/554053__gronkjaer__wronganswer.mp3';
-import buttonSound from '../../assets/img/188388__wubitog__mid-high-tone-button-click.wav';      
+import buttonSound from '../../assets/img/188388__wubitog__mid-high-tone-button-click.wav';
 const QuizWrapper = () => {
     const navigate = useNavigate();
     return <Play navigate={navigate} />;
@@ -201,7 +201,7 @@ class Play extends Component {
             usedHints: 5 - state.hints
         };
         setTimeout(() => {
-            navigate('/play/quiz/analysis', { state: playerStats});
+            navigate('/play/quiz/analysis', { state: playerStats });
         }, 1000)
     }
     showOptions = () => {
@@ -209,6 +209,43 @@ class Play extends Component {
         options.forEach((opi) => {
             opi.style.visibility = 'visible';
         })
+    }
+    handlefiftyFifty=()=>{
+        if (this.state.fiftyFifty === 0) {
+            console.log("out of hints")
+            M.toast({
+                html: "Out of Hints",
+                classes: "toast-valid",
+                displayLength: 1500,
+            })
+        }
+        if (this.state.fiftyFifty > 0) {
+            const options = Array.from(document.querySelectorAll('.opi'))
+            console.log(options)
+            let indexofAnswer;
+            options.forEach((opi, index) => {
+                if (opi.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
+                    indexofAnswer = index;
+                }
+            });
+            while (true) {
+                const randomnumber = Math.round(Math.random() * 3);
+                const randomnumber1 = Math.round(Math.random() * 3);
+                if (randomnumber !== indexofAnswer && randomnumber1!==indexofAnswer && !this.state.previousRandomNumbers.includes(randomnumber) &&!this.state.previousRandomNumbers.includes(randomnumber1)) {
+                    options.forEach((opi, index) => {
+                        if (index === randomnumber || index===randomnumber1) {
+                            opi.style.visibility = 'hidden';
+                            this.setState(prevState => ({
+                                fiftyFifty: prevState.fiftyFifty - 0.5,
+                                previousRandomNumbers: prevState.previousRandomNumbers.concat(randomnumber)
+                            }))
+                        }
+                    })
+                    if (this.state.previousRandomNumbers.length >= 3) break;
+                    break;
+                }
+            }
+        }
     }
     handleHints = () => {
         if (this.state.hints === 0) {
@@ -249,7 +286,7 @@ class Play extends Component {
     }
     render() {
         const { color, alert } = this.state;
-        const { currentQuestion, currentQuestionIndex, hints, time } = this.state;
+        const { currentQuestion, currentQuestionIndex, hints,fiftyFifty, time } = this.state;
         return (
             <Fragment>
                 <Helmet><title>Quiz-Questions</title></Helmet>
@@ -258,21 +295,22 @@ class Play extends Component {
                         <h3>Questioncount-{currentQuestionIndex}</h3>
                     </div>
                     <div className="time">
-                    <div className='timeTag'>{time.minutes}:{time.seconds}</div>
-                    <button className='z' id="submit-button" onClick={this.endGame} ><div className="submit">Submit</div></button>
+                        <div className='timeTag'>{time.minutes}:{time.seconds}</div>
+                        <button className='z' id="submit-button" onClick={this.endGame} ><div className="submit">Submit</div></button>
                     </div>
                 </div></header>
                 <div className="Question">
                     {/* <Header/> */}
                     <div className="alert"><Alert alert={alert} /></div>
                     <div className="Question-1">
-                        <div className="lifeline">
+                        <div className="lifeline" onClick={this.handlefiftyFifty}>
                             <span className='mdi mdi-set-center mdi-24px lifeline-icon'></span>
+                            <div style={{ color: 'green', fontWeight: "bold", fontSize: "1rem" }} className='hint-index mx-2 my-2' >{fiftyFifty}</div>
                         </div>
                         <h1>{currentQuestion.question}</h1>
                         <div className="hints" onClick={this.handleHints}>
                             <div className='mdi mdi-lightbulb-on-outline mdi-24px lifeline-icon'></div>
-                            <div style={{color:'green',fontWeight:"bold",fontSize:"1rem"}} className='hint-index mx-2 my-2' >{hints}</div>
+                            <div style={{ color: 'green', fontWeight: "bold", fontSize: "1rem" }} className='hint-index mx-2 my-2' >{hints}</div>
                         </div>
                     </div>
                     <div className="options">
