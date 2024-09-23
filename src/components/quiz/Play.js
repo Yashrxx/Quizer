@@ -211,42 +211,34 @@ class Play extends Component {
         })
     }
     handlefiftyFifty=()=>{
-        if (this.state.fiftyFifty === 0) {
-            console.log("out of hints")
-            M.toast({
-                html: "Out of Hints",
-                classes: "toast-valid",
-                displayLength: 1500,
-            })
-        }
-        if (this.state.fiftyFifty > 0) {
-            const options = Array.from(document.querySelectorAll('.opi'))
-            console.log(options)
-            let indexofAnswer;
-            options.forEach((opi, index) => {
-                if (opi.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
-                    indexofAnswer = index;
+            const { fiftyFifty, fiftyFiftyUsed, answer } = this.state;
+            if (fiftyFifty > 0 && !fiftyFiftyUsed) {
+                const options = document.querySelectorAll('.opi');
+                const randomNumbers = [];
+                let indexOfAnswer;
+                options.forEach((opi, index) => {
+                    if (opi.innerHTML.toLowerCase() === answer.toLowerCase()) {
+                        indexOfAnswer = index;
+                    }
+                });
+                while (randomNumbers.length < 2) {
+                    const randomNumber = Math.floor(Math.random() * options.length);
+                    if (randomNumber !== indexOfAnswer && !randomNumbers.includes(randomNumber)) {
+                        randomNumbers.push(randomNumber);
+                    }
                 }
-            });
-            while (true) {
-                const randomnumber = Math.round(Math.random() * 3);
-                const randomnumber1 = Math.round(Math.random() * 3);
-                if (randomnumber !== indexofAnswer && randomnumber1!==indexofAnswer && !this.state.previousRandomNumbers.includes(randomnumber) &&!this.state.previousRandomNumbers.includes(randomnumber1)) {
-                    options.forEach((opi, index) => {
-                        if (index === randomnumber || index===randomnumber1) {
-                            opi.style.visibility = 'hidden';
-                            this.setState(prevState => ({
-                                fiftyFifty: prevState.fiftyFifty - 0.5,
-                                previousRandomNumbers: prevState.previousRandomNumbers.concat(randomnumber)
-                            }))
-                        }
-                    })
-                    if (this.state.previousRandomNumbers.length >= 3) break;
-                    break;
-                }
+                options.forEach((opi, index) => {
+                    if (randomNumbers.includes(index)) {
+                        opi.style.visibility = 'hidden';
+                    }
+                });
+                this.setState(prevState => ({
+                    fiftyFifty: prevState.fiftyFifty - 1,
+                    fiftyFiftyUsed: true
+                }));
             }
-        }
-    }
+        
+    };
     handleHints = () => {
         if (this.state.hints === 0) {
             console.log("out of hints")
@@ -266,7 +258,6 @@ class Play extends Component {
                 }
             });
             while (true) {
-                // const {hints}=this.hn
                 const randomnumber = Math.round(Math.random() * 3);
                 if (randomnumber !== indexofAnswer && !this.state.previousRandomNumbers.includes(randomnumber)) {
                     options.forEach((opi, index) => {
