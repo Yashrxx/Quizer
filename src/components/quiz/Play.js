@@ -188,7 +188,7 @@ class Play extends Component {
     }
     endGame = (props) => {
         const { navigate } = this.props;
-        alert('1he Quiz has ended');
+        alert('The Quiz has ended PRESS ok to see your Report');
         // const navigate = useNavigate();
         const { state } = this;
         const playerStats = {
