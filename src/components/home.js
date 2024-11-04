@@ -22,7 +22,7 @@ export default function Home() {
                 <div className='log'>Login</div></Link>
             </div>
             <div className="auth-container-2">
-            <Link className='auth-button' to="/register">
+            <Link className='auth-button' to="/signup">
             <div className="sign">Sign up</div></Link>
             </div>
             </div>

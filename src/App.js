@@ -6,6 +6,7 @@ import Play from "./components/quiz/Play.js";
 import Analysis from './components/quiz/Analysis.js';
 import Navbar from './components/Navbar';
 import Login from "./components/quiz/Login.js";
+import Signup from "./components/quiz/Signup.js";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,6 +24,7 @@ function App() {
      <Route path="/play/quiz" alert={alert} exact element={<Play/>}/>
      <Route path="/play/quiz/analysis" exact element={<Analysis/>}/>
      <Route path="/login" exact element={<Login/>}/>
+     <Route path="/signup" exact element={<Signup/>}/>
      </Routes>
     </Router>
   );
