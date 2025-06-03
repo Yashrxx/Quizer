@@ -1,122 +1,202 @@
 [
     {
-        "question": "What temperature does water boil at?",
-        "optionA": "50 degrees Celcius",
-        "optionB": "25 degrees Celcius",
-        "optionC": "100 degrees Celcius",
-        "optionD": "150 degrees Celcius",
-        "answer": "100 degrees Celcius"
-    },
-    {
-        "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
-        "optionA": "Wole Soyinka",
-        "optionB": "William Shakespeare",
-        "optionC": "Ngozi Chimamanda Adichie",
-        "optionD": "Dan Brown",
-        "answer": "William Shakespeare"
-    },
-    {
-        "question": "What did the crocodile swallow in Peter Pan?",
-        "optionA": "A Book",
-        "optionB": "A Computer",
-        "optionC": "A pair of shoes",
-        "optionD": "Alarm Clock",
-        "answer": "Alarm Clock"
-    },
-    {
-        "question": "Which is the only mammal that can’t jump?",
-        "optionA": "Dog",
-        "optionB": "Elephant",
-        "optionC": "Goat",
-        "optionD": "Lion",
-        "answer": "Elephant"
-    },
-    {
-        "question": "Who lived at 221B, Baker Street, London?",
-        "optionA": "Tony Stark",
-        "optionB": "Morgan Freeman",
-        "optionC": "Sherlock Holmes",
-        "optionD": "Samuel L. Jackson",
-        "answer": "Sherlock Holmes"
-    },
-    {
-        "question": "What colour is a panda?",
-        "optionA": "Green and Yellow",
-        "optionB": "Blue and Red",
-        "optionC": "Green and White",
-        "optionD": "Black and White",
-        "answer": "Black and White"
-    },
-    {
-        "question": "Where is the smallest bone in the human body?",
-        "optionA": "The Chest",
-        "optionB": "The Ear",
-        "optionC": "The Legs",
-        "optionD": "The Hands",
-        "answer": "The Ear"
-    },
-    {
-        "question": "What does the roman numeral C represent?",
-        "optionA": "100",
-        "optionB": "10",
-        "optionC": "10,000",
-        "optionD": "1,000,000",
-        "answer": "100"
-    },
-    {
-        "question": "What takes place in Hong Kong's Happy Valley?",
-        "optionA": "Chicken Wrestling",
-        "optionB": "Horse racing",
-        "optionC": "Street Racing",
-        "optionD": "Arm Wrestling",
-        "answer": "Horse racing"
-    },
-    {
-        "question": "Who painted the Mona Lisa?",
-        "optionA": "Alexander Graham Bell",
-        "optionB": "Sir Isaac Newton",
-        "optionC": "Leonardo Da Vinci",
-        "optionD": "Albert Einstein",
-        "answer": "Leonardo Da Vinci"
-    },
-    {
-        "question": "What’s the most important book in the Hindu religion?",
-        "optionA": "The Vedas",
-        "optionB": "The Bhagvad Geetha",
-        "optionC": "The purans",
-        "optionD": "The Science text Book",
-        "answer": "The Vedas"
-    },
-    {
-        "question": "What’s the capital of Nigeria?",
-        "optionA": "Cape Town",
-        "optionB": "San Francisco",
-        "optionC": "Abuja",
-        "optionD": "Syndey",
-        "answer": "Abuja"
-    },
-    {
-        "question": "How many squares are there on a chess board?",
-        "optionA": "128",
-        "optionB": "64",
+        "question": "What is the next number in the series? 2, 4, 8, 16, ___",
+        "optionA": "18",
+        "optionB": "20",
         "optionC": "32",
-        "optionD": "256",
-        "answer": "64"
+        "optionD": "24",
+        "answer": "32"
     },
     {
-        "question": "Who invented the electric light bulb?",
-        "optionA": "Tom Cruise",
-        "optionB": "Barack Obama",
-        "optionC": "Wole Soyinka",
-        "optionD": "Thomas Edison",
-        "answer": "Thomas Edison"
+        "question": "If 5 pens cost ₹100, how much do 3 pens cost?",
+        "optionA": "₹20",
+        "optionB": "₹60",
+        "optionC": "₹80",
+        "optionD": "₹50",
+        "answer": "₹60"
     },
     {
-        "question": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
-        "answer": "In the beginning"
+        "question": "Which is the odd one out? 2, 4, 6, 9, 10",
+        "optionA": "2",
+        "optionB": "4",
+        "optionC": "6",
+        "optionD": "9",
+        "answer": "9"
+    },
+    {
+        "question": "What number is missing? 3 + 5 = 15, 4 + 6 = 24, 5 + 7 = ?",
+        "optionA": "30",
+        "optionB": "35",
+        "optionC": "25",
+        "optionD": "28",
+        "answer": "35"
+    },
+    {
+        "question": "What comes next? A, C, E, G, ___",
+        "optionA": "H",
+        "optionB": "I",
+        "optionC": "J",
+        "optionD": "K",
+        "answer": "I"
+    },
+    {
+        "question": "Which shape comes next? ◼️, ⚫, ◼️, ⚫, ___",
+        "optionA": "⚫",
+        "optionB": "◻️",
+        "optionC": "◼️",
+        "optionD": "🔲",
+        "answer": "◼️"
+    },
+    {
+        "question": "What day comes after Tuesday if yesterday was Sunday?",
+        "optionA": "Monday",
+        "optionB": "Wednesday",
+        "optionC": "Thursday",
+        "optionD": "Friday",
+        "answer": "Monday"
+    },
+    {
+        "question": "Find the missing number: 1, 1, 2, 3, 5, 8, ___",
+        "optionA": "11",
+        "optionB": "12",
+        "optionC": "13",
+        "optionD": "15",
+        "answer": "13"
+    },
+    {
+        "question": "If CAT = 3120, then DOG = ?",
+        "optionA": "4157",
+        "optionB": "4715",
+        "optionC": "3170",
+        "optionD": "2415",
+        "answer": "4157"
+    },
+    {
+        "question": "Choose the word that doesn't belong: Apple, Mango, Banana, Carrot",
+        "optionA": "Apple",
+        "optionB": "Banana",
+        "optionC": "Mango",
+        "optionD": "Carrot",
+        "answer": "Carrot"
+    },
+    {
+        "question": "A cube has how many edges?",
+        "optionA": "6",
+        "optionB": "8",
+        "optionC": "10",
+        "optionD": "12",
+        "answer": "12"
+    },
+    {
+        "question": "How many triangles are in a star shape (like a 6-point star)?",
+        "optionA": "6",
+        "optionB": "8",
+        "optionC": "10",
+        "optionD": "12",
+        "answer": "12"
+    },
+    {
+        "question": "What comes next in this set of directions? North, East, South, ___",
+        "optionA": "West",
+        "optionB": "North",
+        "optionC": "South",
+        "optionD": "East",
+        "answer": "West"
+    },
+    {
+        "question": "Which number is upside down the same? 6, 8, 9, 1",
+        "optionA": "6",
+        "optionB": "8",
+        "optionC": "9",
+        "optionD": "1",
+        "answer": "8"
+    },
+    {
+        "question": "A clock shows 3:15. What is the angle between the hour and minute hands?",
+        "optionA": "0°",
+        "optionB": "7.5°",
+        "optionC": "15°",
+        "optionD": "30°",
+        "answer": "7.5°"
+    },
+    {
+        "question": "Which is the smallest state in India by area?",
+        "optionA": "Sikkim",
+        "optionB": "Goa",
+        "optionC": "Tripura",
+        "optionD": "Delhi",
+        "answer": "Goa"
+    },
+    {
+        "question": "Who was the first Prime Minister of India?",
+        "optionA": "Mahatma Gandhi",
+        "optionB": "Sardar Patel",
+        "optionC": "Jawaharlal Nehru",
+        "optionD": "Dr. B.R. Ambedkar",
+        "answer": "Jawaharlal Nehru"
+    },
+    {
+        "question": "How many spokes are there in the Ashoka Chakra?",
+        "optionA": "22",
+        "optionB": "24",
+        "optionC": "26",
+        "optionD": "30",
+        "answer": "24"
+    },
+    {
+        "question": "Which is the national aquatic animal of India?",
+        "optionA": "Blue Whale",
+        "optionB": "River Otter",
+        "optionC": "Ganges River Dolphin",
+        "optionD": "Sea Turtle",
+        "answer": "Ganges River Dolphin"
+    },
+    {
+        "question": "Which Indian festival is known as the Festival of Lights?",
+        "optionA": "Holi",
+        "optionB": "Diwali",
+        "optionC": "Eid",
+        "optionD": "Christmas",
+        "answer": "Diwali"
+    },
+    {
+        "question": "I speak without a mouth and hear without ears. What am I?",
+        "optionA": "Wind",
+        "optionB": "Phone",
+        "optionC": "Echo",
+        "optionD": "Ghost",
+        "answer": "Echo"
+    },
+    {
+        "question": "Which word is spelled incorrectly in every dictionary?",
+        "optionA": "Wrong",
+        "optionB": "Incorrect",
+        "optionC": "Incorrectly",
+        "optionD": "Typo",
+        "answer": "Incorrectly"
+    },
+    {
+        "question": "You see me once in a minute, twice in a moment, but never in a thousand years. What am I?",
+        "optionA": "E",
+        "optionB": "M",
+        "optionC": "O",
+        "optionD": "N",
+        "answer": "M"
+    },
+    {
+        "question": "What has hands but can’t clap?",
+        "optionA": "Robot",
+        "optionB": "Clock",
+        "optionC": "Statue",
+        "optionD": "Human",
+        "answer": "Clock"
+    },
+    {
+        "question": "If two’s company and three’s a crowd, what are four and five?",
+        "optionA": "Nine",
+        "optionB": "A party",
+        "optionC": "A group",
+        "optionD": "A mess",
+        "answer": "Nine"
     }
 ]
