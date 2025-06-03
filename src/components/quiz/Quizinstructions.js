@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import options from '../../assets/img/nta-mob-1.png';
 // import Play from './Play';
-import QuestionModal from '../../assets/img/nta-mob-2.png';
-import Marker from '../../assets/img/4 marker.jpg';
+// import QuestionModal from '../../assets/img/nta-mob-2.png';
+// import Marker from '../../assets/img/4 marker.jpg';
 export default function Quizinstructions() {
   return (
     <Fragment>

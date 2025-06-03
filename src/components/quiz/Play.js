@@ -57,14 +57,19 @@ class Play extends Component {
                 break;
         }
     }
+    getRandomQuestions = (questions, num) => {
+        const shuffled = [...questions].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, num);
+    };
 
     constructor(props) {
         super(props);
         this.state = {
-            questions,
+            questions: this.getRandomQuestions(questions, 15),
             currentQuestion: {},
             nextQuestion: {},
             previousQuestion: {},
+            userAnswers: {},
             answer: '',
             numberofQuestion: 15,
             numberofAnsweredQuestion: 0,
@@ -89,7 +94,7 @@ class Play extends Component {
     componentWillUnmount() {
         clearInterval(this.interval)
     }
-    displayQuestions = (questions = this.sate.questions, currentQuestion, nextQuestion, previousQuestion, correctAnswers) => {
+    displayQuestions = (questions = this.state.questions, currentQuestion, nextQuestion, previousQuestion, correctAnswers) => {
         let { currentQuestionIndex } = this.state;
         if (!isEmpty(this.state.questions)) {
             currentQuestion = questions[currentQuestionIndex]
@@ -109,15 +114,31 @@ class Play extends Component {
         }
     }
     handleOptionClick = (e) => {
-        if (e.target.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
-            this.correctAnswer();
-            this.handleAnswer(true)
-        }
-        else {
-            this.wrongAnswer();
-            this.handleAnswer(false);
-        }
-    }
+        const selectedAnswer = e.target.innerHTML;
+        const { currentQuestionIndex, answer } = this.state;
+
+        const isCorrect = selectedAnswer.toLowerCase() === answer.toLowerCase();
+
+        this.setState(prevState => ({
+            userAnswers: {
+                ...prevState.userAnswers,
+                [currentQuestionIndex]: selectedAnswer  // overwrite if already answered
+            },
+            numberofAnsweredQuestion: Object.keys({
+                ...prevState.userAnswers,
+                [currentQuestionIndex]: selectedAnswer
+            }).length
+        }), () => {
+            if (isCorrect) {
+                this.correctAnswer();
+                this.handleAnswer(true);
+            } else {
+                this.wrongAnswer();
+                this.handleAnswer(false);
+            }
+        });
+    };
+
     correctAnswer = () => {
         M.toast({
             html: "correct answer",
@@ -130,7 +151,7 @@ class Play extends Component {
             currentQuestionIndex: prevState.currentQuestionIndex + 1,
             numberofAnsweredQuestion: prevState.numberofAnsweredQuestion + 1
         }), () => {
-            if (this.state.nextQuestion === undefined) {
+            if (this.state.currentQuestionIndex + 1 >= this.state.questions.length) {
                 this.endGame();
             }
             else {
@@ -186,58 +207,79 @@ class Play extends Component {
             }
         }, 1000)
     }
-    endGame = (props) => {
-        const { navigate } = this.props;
-        alert('The Quiz has ended PRESS ok to see your Report');
-        // const navigate = useNavigate();
-        const { state } = this;
+    endGame = () => {
+        const { userAnswers, questions } = this.state;
+        let score = 0, correctAnswers = 0, wrongAnswers = 0;
+
+        Object.keys(userAnswers).forEach(index => {
+            const question = questions[index];
+            if (
+                userAnswers[index].toLowerCase() === question.answer.toLowerCase()
+            ) {
+                score++;
+                correctAnswers++;
+            } else {
+                wrongAnswers++;
+            }
+        });
+
         const playerStats = {
-            score: state.score,
-            numberofQuestion: state.numberofQuestion,
-            numberofAnsweredQuestion: state.numberofAnsweredQuestion,
-            correctAnswers: state.correctAnswers,
-            wrongAnswers: state.wrongAnswers,
-            fiftyFiftyUsed: 2 - state.fiftyFifty,
-            usedHints: 5 - state.hints
+            score,
+            numberofQuestion: 15,
+            numberofAnsweredQuestion: Object.keys(userAnswers).length,
+            correctAnswers,
+            wrongAnswers,
+            fiftyFiftyUsed: 2 - this.state.fiftyFifty,
+            usedHints: 5 - this.state.hints
         };
-        setTimeout(() => {
-            navigate('/play/quiz/analysis', { state: playerStats });
-        }, 1000)
-    }
+
+        alert("The quiz has ended. Press OK to see your report.");
+        this.props.navigate('/play/quiz/analysis', { state: playerStats });
+    };
+
     showOptions = () => {
         const options = Array.from(document.querySelectorAll('.opi'))
         options.forEach((opi) => {
             opi.style.visibility = 'visible';
         })
     }
-    handlefiftyFifty=()=>{
-            const { fiftyFifty, fiftyFiftyUsed, answer } = this.state;
-            if (fiftyFifty > 0 && !fiftyFiftyUsed) {
-                const options = document.querySelectorAll('.opi');
-                const randomNumbers = [];
-                let indexOfAnswer;
-                options.forEach((opi, index) => {
-                    if (opi.innerHTML.toLowerCase() === answer.toLowerCase()) {
-                        indexOfAnswer = index;
-                    }
-                });
-                while (randomNumbers.length < 2) {
-                    const randomNumber = Math.floor(Math.random() * options.length);
-                    if (randomNumber !== indexOfAnswer && !randomNumbers.includes(randomNumber)) {
-                        randomNumbers.push(randomNumber);
-                    }
+    handlefiftyFifty = () => {
+        const { fiftyFifty, answer } = this.state;
+
+        if (fiftyFifty > 0) {
+            const options = document.querySelectorAll('.opi');
+            const randomNumbers = [];
+            let indexOfAnswer;
+
+            options.forEach((opi, index) => {
+                if (opi.innerHTML.toLowerCase() === answer.toLowerCase()) {
+                    indexOfAnswer = index;
                 }
-                options.forEach((opi, index) => {
-                    if (randomNumbers.includes(index)) {
-                        opi.style.visibility = 'hidden';
-                    }
-                });
-                this.setState(prevState => ({
-                    fiftyFifty: prevState.fiftyFifty - 1,
-                    fiftyFiftyUsed: true
-                }));
+            });
+
+            while (randomNumbers.length < 2) {
+                const randomNumber = Math.floor(Math.random() * options.length);
+                if (randomNumber !== indexOfAnswer && !randomNumbers.includes(randomNumber)) {
+                    randomNumbers.push(randomNumber);
+                }
             }
-        
+
+            options.forEach((opi, index) => {
+                if (randomNumbers.includes(index)) {
+                    opi.style.visibility = 'hidden';
+                }
+            });
+
+            this.setState(prevState => ({
+                fiftyFifty: prevState.fiftyFifty - 1
+            }));
+        } else {
+            M.toast({
+                html: "No more 50-50 lifelines left!",
+                classes: "toast-invalid",
+                displayLength: 1500
+            });
+        }
     };
     handleHints = () => {
         if (this.state.hints === 0) {
@@ -276,14 +318,14 @@ class Play extends Component {
         }
     }
     render() {
-        const { color, alert } = this.state;
-        const { currentQuestion, currentQuestionIndex, hints,fiftyFifty, time } = this.state;
+        const { alert } = this.state;
+        const { currentQuestion, currentQuestionIndex, hints, fiftyFifty, time } = this.state;
         return (
             <Fragment>
                 <Helmet><title>Quiz-Questions</title></Helmet>
                 <header><div className="head-x">
                     <div className="currentIndex-1">
-                        <h3>Questioncount-{currentQuestionIndex}</h3>
+                        <h3>Questioncount-{currentQuestionIndex + 1}</h3>
                     </div>
                     <div className="time">
                         <div className='timeTag'>{time.minutes}:{time.seconds}</div>
@@ -306,12 +348,20 @@ class Play extends Component {
                     </div>
                     <div className="options">
                         <div className='col-1'>
-                            <div className='opt-1'><button onClick={this.handleOptionClick} style={{ color: 'white', backgroundColor: color }} className="opi">{currentQuestion.optionA}</button></div>
-                            <div className="opt-2"><button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionB}</button></div>
+                            <div className='opt-1'>
+                            <button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionA}</button>
+                            </div>
+                            <div className="opt-2">
+                            <button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionB}</button>
+                            </div>
                         </div>
                         <div className='col-2'>
-                            <div className="opt-3"><button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionC}</button></div>
-                            <div className="opt-4"><button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionD}</button></div>
+                            <div className="opt-3">
+                            <button onClick={this.handleOptionClick} className="opi" >{currentQuestion.optionC}</button>
+                            </div>
+                            <div className="opt-4">
+                            <button onClick={this.handleOptionClick} className="opi">{currentQuestion.optionD}</button>
+                            </div>
                         </div>
                     </div>
                     <footer>
@@ -335,6 +385,7 @@ export default QuizWrapper;
 //         correctAnswers: state.correctAnswers,
 //         wrongAnswers: state.wrongAnswers,
 //         fiftyFiftyUsed: 2 - state.fiftyFiftyUsed,
+
 //         hintsUsed: 5 - state.hintsUsed
 //     };
 //     console.log(playerStats);
